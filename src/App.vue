@@ -7,6 +7,23 @@
           A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
         </h2>
       </div>
+      <div class="container">
+        <div class="field">
+          <label class="label">Enter text to be unescaped</label>
+          <div class="control">
+            <textarea class="textarea is-primary" rows="10"
+                      placeholder="Paste text to be unescaped here."></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Unescaped text</label>
+          <div class="control">
+            <textarea class="textarea is-primary" rows="10"
+                      placeholder="The unescaped text will appear here."></textarea>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
