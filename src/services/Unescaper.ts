@@ -22,7 +22,7 @@ export class Unescaper {
     return null
   }
 
-  static unescapeIteration(text: string, length: number): string {
+  private static unescapeIteration(text: string, length: number): string {
     let processedText: string = "";
     for(let i = 0; i < text.length; i++) {
       var substring = text.substring(i)
