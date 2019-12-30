@@ -52,7 +52,6 @@ export default class App extends Vue {
   escapedText: string = ""
 
   inputChanged() {
-    console.log(`Escaping ${this.inputText}`)
     this.escapedText = Unescaper.unescape(this.inputText)
   }
 
