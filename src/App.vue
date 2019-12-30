@@ -16,6 +16,8 @@
               class="textarea is-primary"
               rows="10"
               placeholder="Paste text to be unescaped here."
+              v-model="inputText"
+              @input="inputChanged()"
             ></textarea>
           </div>
         </div>
@@ -27,6 +29,8 @@
               class="textarea is-primary"
               rows="10"
               placeholder="The unescaped text will appear here."
+              readonly
+              v-model="escapedText"
             ></textarea>
           </div>
         </div>
@@ -41,5 +45,14 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+
+  inputText: string = ""
+  escapedText: string = ""
+
+  inputChanged() {
+    this.escapedText = this.inputText
+  }
+
+}
 </script>
