@@ -41,6 +41,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { Unescaper } from "./services/Unescaper"
 
 @Component({
   components: {}
@@ -51,7 +52,7 @@ export default class App extends Vue {
   escapedText: string = ""
 
   inputChanged() {
-    this.escapedText = this.inputText
+    this.escapedText = Unescaper.unescape(this.inputText)
   }
 
 }
