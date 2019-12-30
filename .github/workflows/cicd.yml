@@ -1,8 +1,8 @@
 name: CI+CD
 
 on:
-  push:	
-    branches:	
+  push:
+    branches:
       - master
 
 jobs:
@@ -16,6 +16,10 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # yarn install
+    - name: Install dependencies
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: test # yarn test
     - name: Build
       uses: borales/actions-yarn@v2.0.0
       with:
