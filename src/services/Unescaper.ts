@@ -29,6 +29,7 @@ export class Unescaper {
       const mapping = this.mapBeginnig(substring, length)
       if(mapping !== null) {
         processedText += mapping
+        i += length - 1
       }
       else {
         processedText += substring[0]
