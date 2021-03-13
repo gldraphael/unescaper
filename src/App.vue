@@ -36,10 +36,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator"
 import { Unescaper } from "./services/Unescaper"
+import { Vue, Options } from "vue-class-component"
 
-@Component({
+@Options({
   components: {}
 })
 export default class App extends Vue {
