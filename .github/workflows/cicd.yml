@@ -15,18 +15,21 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: Install dependencies
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install # yarn install
-    - name: Install dependencies
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: test # yarn test
-    - name: Build
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: build # yarn build
+    - run: yarn install
+    - run: yarn test
+    - run: yarn build
+    # - name: Install dependencies
+    #   uses: borales/actions-yarn@v2.0.0
+    #   with:
+    #     cmd: install # yarn install
+    # - name: Install dependencies
+    #   uses: borales/actions-yarn@v2.0.0
+    #   with:
+    #     cmd: test # yarn test
+    # - name: Build
+    #   uses: borales/actions-yarn@v2.0.0
+    #   with:
+    #     cmd: build # yarn build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
